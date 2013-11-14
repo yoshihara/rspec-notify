@@ -1,0 +1,3 @@
+--color
+-r ./lib/rspec/notify.rb
+--format RSpec::Notify
