@@ -1,6 +1,6 @@
 # Rspec::Notify
 
-RSpec notification by Growl.
+RSpec notification with Growl. (for OSX)
 
 ## Installation
 
