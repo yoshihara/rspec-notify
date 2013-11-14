@@ -20,6 +20,11 @@ Or install it yourself as:
 
     $ rspec --color -f RSpec::Notify your_spec.rb
 
+
+## Icons
+
+The success/failure/pending are found in http://www.iconsdb.com/.
+
 ## Contributing
 
 1. Fork it

@@ -1,5 +1,5 @@
 base_dir = File.dirname(__FILE__)
-icons_dir = File.join(base_dir, "icons")
+icons_dir = File.join(base_dir, "..", "icons")
 icons = Dir.glob(File.join(icons_dir, "*.png"))
 
 icons.each do |icon|
