@@ -1,8 +1,8 @@
 require 'ruby-growl'
-require 'rspec/core/formatters/base_text_formatter'
+require 'rspec/core/formatters/progress_formatter'
 
 module RSpec
-  class Notify < RSpec::Core::Formatters::BaseTextFormatter
+  class Notify < RSpec::Core::Formatters::ProgressFormatter
     def initalize
       @summary = ""
     end
