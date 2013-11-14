@@ -1,6 +1,6 @@
 # Rspec::Notify
 
-TODO: Write a gem description
+RSpec notification by Growl.
 
 ## Installation
 
@@ -18,7 +18,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+    $ rspec --color -f RSpec::Notify your_spec.rb
 
 ## Contributing
 
