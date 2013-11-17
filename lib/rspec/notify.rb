@@ -2,25 +2,30 @@ require 'ruby-growl'
 require 'rspec/core/formatters/progress_formatter'
 
 module RSpec
-  class Notify < RSpec::Core::Formatters::ProgressFormatter
+  class Notify < RSpec::Core::Formatters::BaseTextFormatter
     def initalize
       @summary = ""
     end
 
-    def colorise_summary(summary)
-      super
-      @summary = summary
+    def dump_pending
+    end
+
+    def dump_failures
+    end
+
+    def message(message)
     end
 
     def dump_summary(duration, example_count, failure_count, pending_count)
-      super
+      summary =
+        "#{example_count} examples, #{failure_count} failures, #{pending_count} pending"
       success_count = example_count - failure_count
       icon = read_icon(success_count, failure_count, pending_count)
 
       title = "#{(success_count / example_count.to_f * 100).round(2)}% passed"
       g = Growl.new "localhost", "rspec-growl"
       g.add_notification("notification", "rspec Notification", icon)
-      g.notify "notification", title, @summary
+      g.notify "notification", title, summary
     end
 
     private
